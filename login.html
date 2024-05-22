@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <!-- 공통 스타일 -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- login 스타일 -->
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <title>Pli</title>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <div class="img-box">
+                        <a href="./index.html"><img src="./images/logo.jpg" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <div class="ico-search">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <form action="#">
+                        <input type="search" id="box" placeholder="검색어를 입력하세요.">
+                    </form>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li>
+                            <a href="#">플리차트</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">Pli 30</a></li>
+                                <li><a href="#">시대별 차트</a></li>
+                                <li><a href="#">뮤직비디오 차트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">최신음악</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">최신 곡</a></li>
+                                <li><a href="#">최신 앨범</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">장르음악</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">ALL</a></li>
+                                <li><a href="#">K-POP</a></li>
+                                <li><a href="#">POP</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">영상</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">뮤직비디오</a></li>
+                                <li><a href="#">퍼포먼스</a></li>
+                                <li><a href="#">Live</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">추천</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">추천플리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">매거진</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">스페셜</a></li>
+                                <li><a href="#">방송</a></li>
+                                <li><a href="#">공연</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="q-nav01">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                    </ul>
+                </nav>
+                <nav class="q-nav02">
+                    <ul>
+                        <li class="ticket">
+                            <a href="#">이용권</a>
+                            <div class="ico-ticket"><img src="./images/ico-ticket.svg" alt="ticket-icon"></div>
+                        </li>
+                        <li class="mybox">
+                            <a href="#">보관함</a>
+                            <div class="ico-mybox"><img src="./images/ico-mybox.svg" alt="mybox-icon"></div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="studio">
+                    <a href="#">플리스튜디오</a>
+                    <div class="ico-studio"><img src="./images/ico-studio.svg" alt="studio-icon"></div>
+                </div>
+            </div>
+        </header>
+        <section class="sec">
+            <div class="container">
+                <input type="text" id="id-box" placeholder="아이디를 입력해주세요">
+                <div class="pw">
+                    <input type="text" id="pw-box" placeholder="비밀번호를 입력해주세요">
+                    <img src="./images/ico-eye.svg" alt="eye">
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="id-checkbox">
+                    <span>아이디 저장</span>
+                </div>
+                <div class="login-box">
+                    <a href="#"><span>로그인</span></a>
+                </div>
+                <div class="find">
+                    <a href="#"><p class="find01">ID 찾기</p></a>
+                    <a href="#"><p class="find02">PW 찾기</p></a>
+                    <a href="#"><p class="find03">회원가입</p></a>
+                </div>
+                <div class="sns-login">
+                    <div class="img-box"><a href="#"><img src="./images/ico-naver.png" alt="naver"></a></div>
+                    <div class="img-box"><a href="#"><img src="./images/ico-kakao.png" alt="kakao"></a></div>
+                    <div class="img-box"><a href="#"><img src="./images/ico-google.png" alt="google"></a></div>
+                    <div class="img-box"><a href="#"><img src="./images/ico-apple.png" alt="apple"></a></div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer01">
+                    <p>이용약관 | <strong>개인정보처리방침</strong> | 청소년 보호정책 | 위치기반서비스 이용약관 | 서비스이용문의</p>
+                    <address>
+                        (주)pli striming company 대표이사 홍길동 | 사업자등록번호 213-88-01524<br>
+                        서울특별시 강남구 강남대로 123, 플리 빌딩 13F | 1566-8724 | pli@music-pli.com<br>
+                        통신판매일신고 2024-서울강남-01524<br>
+                        ALL RIGHTS RESERVED.
+                    </address>
+                </div>
+                <div class="footer02">
+                    <p>이벤트<br>고객센터<br>공지사항</p>
+                    <div class="sns">
+                        <a href="#" class="sns01"><img src="./images/ico-facebook.svg" alt="facebook-icon"></a>
+                        <a href="#" class="sns02"><img src="./images/ico-insta.svg" alt="insta-icon"></a>
+                        <a href="#" class="sns03">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // sub-nav 호출 이벤트
+        $('.main-nav').mouseover(function(){
+            $('.header').addClass('active');
+            $('.sub-nav').slideDown(300);
+        })
+        $('.header').mouseleave(function(){
+            $('.header').removeClass('active');
+            $('.sub-nav').slideUp(300);
+        })
+    </script>
+</body>
+</html>

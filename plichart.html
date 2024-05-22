@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <!-- 공통 스타일 -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- plichart 스타일 -->
+    <link rel="stylesheet" href="./css/plichart.css">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <title>Pli</title>
+
+    <style>
+        .sec .container{width:1200; margin:32px auto;}
+        .sec-txt{padding:38px;}
+        .sec .tit{font-weight:700; font-size:30px; margin-right:33px;}
+        .tit-box{display:flex; font-size:16px; align-items:center; padding-bottom:34px;}
+        .local-nav{display:flex; width:330px; justify-content:space-between;}
+        .local-nav li{width:93px; height:30px; border-radius:10px; background:#ff8a00; text-align:center; padding-top:7px;}
+        .local-nav li:nth-child(2){width:103px; background:#ccc;}
+        .local-nav li:nth-child(3){width:126px; background:#ccc;}
+        .art, .sub-tit{display:flex; border-top:2px solid #ccc; padding:12px;}
+        .sub-tit input, .art input{width:20px;}
+        .art07{border-bottom:2px solid #ccc;}
+        .group01, .group02{display:flex; align-items:center;}
+        .group01{margin-left:38px; width:583px; justify-content:space-between;}
+        .group02{margin-left:213px; width:145px; justify-content:space-between;}
+        .art .img-box img{width:85px; margin-right:98px;}
+        .art .icon-box{display:flex;}
+        .art .icon-box img{width:32px;}
+        .s-txt{font-size:14px;}
+        .m-txt, .icon-box{font-size:16px; position:absolute; left:600px;}
+        .m-txt{margin-top:-8px;}
+        .icon-box{left:900px;}
+        .icon-box img:last-child{margin-left:30px;}
+        .box{display:flex; align-items:center;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <div class="img-box">
+                        <a href="./index.html"><img src="./images/logo.jpg" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <div class="ico-search">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <form action="#">
+                        <input type="search" id="box" placeholder="검색어를 입력하세요.">
+                    </form>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li>
+                            <a href="#">플리차트</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">Pli 30</a></li>
+                                <li><a href="#">시대별 차트</a></li>
+                                <li><a href="#">뮤직비디오 차트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">최신음악</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">최신 곡</a></li>
+                                <li><a href="#">최신 앨범</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">장르음악</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">ALL</a></li>
+                                <li><a href="#">K-POP</a></li>
+                                <li><a href="#">POP</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">영상</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">뮤직비디오</a></li>
+                                <li><a href="#">퍼포먼스</a></li>
+                                <li><a href="#">Live</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">추천</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">추천플리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">매거진</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">스페셜</a></li>
+                                <li><a href="#">방송</a></li>
+                                <li><a href="#">공연</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="q-nav01">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                    </ul>
+                </nav>
+                <nav class="q-nav02">
+                    <ul>
+                        <li class="ticket">
+                            <a href="#">이용권</a>
+                            <div class="ico-ticket"><img src="./images/ico-ticket.svg" alt="ticket-icon"></div>
+                        </li>
+                        <li class="mybox">
+                            <a href="#">보관함</a>
+                            <div class="ico-mybox"><img src="./images/ico-mybox.svg" alt="mybox-icon"></div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="studio">
+                    <a href="#">플리스튜디오</a>
+                    <div class="ico-studio"><img src="./images/ico-studio.svg" alt="studio-icon"></div>
+                </div>
+            </div>
+        </header>
+        <section class="sec">
+            <div class="container">
+                <div class="tit-box">
+                    <h2 class="tit">플리 차트</h2>
+                    <ul class="local-nav">
+                        <li><a href="#">Pli 30</a></li>
+                        <li><a href="#">시대별 차트</a></li>
+                        <li><a href="#">뮤직비디오 차트</a></li>
+                    </ul>
+                </div>
+                <section class="sec-txt">
+                    <div class="sub-tit">
+                        <input type="checkbox" id="checkbox">
+                        <ul class="group01">
+                            <li>순위</li>
+                            <li>곡정보</li>
+                            <li>앨범</li>
+                        </ul>
+                        <ul class="group02">
+                            <li>듣기</li>
+                            <li>담기</li>
+                            <li>다운</li>
+                        </ul>
+                    </div>
+                    <article class="art art01">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">1</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main01-01.jpg" alt="main01-01"></a></div>
+                        <div class="box">
+                            <a href="#">아낌없이 널 사랑해 함께 걷는 모든 순간에<br><span class="s-txt">아샤트리</span></a>
+                            <a href="#"><span class="m-txt">아낌없이 널 사랑해</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art02">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">2</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main01-02.jpg" alt="main01-02"></a></div>
+                        <div class="box">
+                            <a href="#">좋아해요<br><span class="s-txt">폴킴</span></a>
+                            <a href="#"><span class="m-txt">눈물의 여왕 OST Part.6</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art03">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">3</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main01-03.jpg" alt="main01-03"></a></div>
+                        <div class="box">
+                            <a href="#">Beautiful (Feat. B.I)<br><span class="s-txt">basecamp</span></a>
+                            <a href="#"><span class="m-txt">Beautiful</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art04">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">4</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main01-04.jpg" alt="main01-04"></a></div>
+                        <div class="box">
+                            <a href="#">Work it Out<br><span class="s-txt">OXYNOVA</span></a>
+                            <a href="#"><span class="m-txt">Love & Life</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art05">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">5</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main01-05.jpg" alt="main01-05"></a></div>
+                        <div class="box">
+                            <a href="#">봄<br><span class="s-txt">박혜경</span></a>
+                            <a href="#"><span class="m-txt">봄</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art06">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">6</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main01-06.jpg" alt="main01-06"></a></div>
+                        <div class="box">
+                            <a href="#">기분 좋은 날<br><span class="s-txt">김다현</span></a>
+                            <a href="#"><span class="m-txt">미녀와 순정남 OST Part.3</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art07">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">7</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main01-07.jpg" alt="main01-07"></a></div>
+                        <div class="box">
+                            <a href="#">흐린 눈<br><span class="s-txt">아름</span></a>
+                            <a href="#"><span class="m-txt">Blurry</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art08">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">8</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main01-08.jpg" alt="main01-08"></a></div>
+                        <div class="box">
+                            <a href="#">Best Friend<br><span class="s-txt">퍼즐리 (FUZZILY)</span></a>
+                            <a href="#"><span class="m-txt">Best Friend</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art09">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">9</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main01-09.jpg" alt="main01-09"></a></div>
+                        <div class="box">
+                            <a href="#">티라미수 케익<br><span class="s-txt">10CM</span></a>
+                            <a href="#"><span class="m-txt">남은 인생 10년 X 10CM</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art10">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">10</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main01-10.jpg" alt="main01-10"></a></div>
+                        <div class="box">
+                            <a href="#">Could It Be<br><span class="s-txt">우기 ((여자)아이들)</span></a>
+                            <a href="#"><span class="m-txt">YUQ1</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art11">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">11</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main02-01.jpg" alt="main02-01"></a></div>
+                        <div class="box">
+                            <a href="#">Q&A<br><span class="s-txt">현아</span></a>
+                            <a href="#"><span class="m-txt">Attitude</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art12">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">12</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main02-02.jpg" alt="main02-02"></a></div>
+                        <div class="box">
+                            <a href="#">오랜만이야<br><span class="s-txt">최유리</span></a>
+                            <a href="#"><span class="m-txt">오랜만이야</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art13">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">13</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main02-03.jpg" alt="main02-03"></a></div>
+                        <div class="box">
+                            <a href="#">종로에서<br><span class="s-txt">미유 (Mew)</span></a>
+                            <a href="#"><span class="m-txt">종로에서</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art14">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">14</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main02-04.jpg" alt="main02-04"></a></div>
+                        <div class="box">
+                            <a href="#">라디오 드라이브<br><span class="s-txt">9와 숫자들</span></a>
+                            <a href="#"><span class="m-txt">라디오 드라이브</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art15">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">15</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main02-05.jpg" alt="main02-05"></a></div>
+                        <div class="box">
+                            <a href="#">시차<br><span class="s-txt">백아</span></a>
+                            <a href="#"><span class="m-txt">편지</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art16">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">16</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main02-06.jpg" alt="main02-06"></a></div>
+                        <div class="box">
+                            <a href="#">Broke My Heart (Feat. Lay Bankz)<br><span class="s-txt">KINO</span></a>
+                            <a href="#"><span class="m-txt">If this is love, I want a refund</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art17">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">17</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main02-07.jpg" alt="main02-07"></a></div>
+                        <div class="box">
+                            <a href="#">be like YOU<br><span class="s-txt">정수민</span></a>
+                            <a href="#"><span class="m-txt">be like YOU</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art18">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">18</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main02-08.jpg" alt="main02-08"></a></div>
+                        <div class="box">
+                            <a href="#">이 밤이 다 가기 전에 (Feat. siso (시소))<br><span class="s-txt">보이비</span></a>
+                            <a href="#"><span class="m-txt">nightvibe2</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art19">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">19</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main02-09.jpg" alt="main02-09"></a></div>
+                        <div class="box">
+                            <a href="#">나 잠깐 잠들어 있을게요<br><span class="s-txt">김현창</span></a>
+                            <a href="#"><span class="m-txt">살아서 슬퍼야지</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art20">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">20</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main02-10.jpg" alt="main02-10"></a></div>
+                        <div class="box">
+                            <a href="#">52<br><span class="s-txt">예빛</span></a>
+                            <a href="#"><span class="m-txt">52</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art21">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">21</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main03-01.jpg" alt="main03-01"></a></div>
+                        <div class="box">
+                            <a href="#">Candle (Feat. Yyeon)<br><span class="s-txt">Puer</span></a>
+                            <a href="#"><span class="m-txt">Candle</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art22">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">22</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main03-02.jpg" alt="main03-02"></a></div>
+                        <div class="box">
+                            <a href="#">FANCY<br><span class="s-txt">EJel (이젤)</span></a>
+                            <a href="#"><span class="m-txt">유명가수와 길거리 심사단 EP.8</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art23">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">23</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main03-03.jpg" alt="main03-03"></a></div>
+                        <div class="box">
+                            <a href="#">NU SHOES (SPED UP)<br><span class="s-txt">TOZ (티오지)</span></a>
+                            <a href="#"><span class="m-txt">NU SHOES (SPED UP)</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art24">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">24</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main03-04.jpg" alt="main03-04"></a></div>
+                        <div class="box">
+                            <a href="#">독립<br><span class="s-txt">전현재</span></a>
+                            <a href="#"><span class="m-txt">독립</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art25">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">25</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main03-05.jpg" alt="main03-05"></a></div>
+                        <div class="box">
+                            <a href="#">Say It<br><span class="s-txt">ZEREE</span></a>
+                            <a href="#"><span class="m-txt">NOTE,</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art26">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">26</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main03-06.jpg" alt="main03-06"></a></div>
+                        <div class="box">
+                            <a href="#">봄비 (Remastered 2024)<br><span class="s-txt">원호</span></a>
+                            <a href="#"><span class="m-txt">봄</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art27">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">27</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main03-07.jpg" alt="main03-07"></a></div>
+                        <div class="box">
+                            <a href="#">바이올렛<br><span class="s-txt">J.Fla</span></a>
+                            <a href="#"><span class="m-txt">Colours : The First</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art28">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">28</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main03-08.jpg" alt="main03-08"></a></div>
+                        <div class="box">
+                            <a href="#">너와 나<br><span class="s-txt">박소은</span></a>
+                            <a href="#"><span class="m-txt">너와 나</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art29">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">29</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main03-09.jpg" alt="main03-09"></a></div>
+                        <div class="box">
+                            <a href="#">유일한 향기<br><span class="s-txt">마치 (MRCH)</span></a>
+                            <a href="#"><span class="m-txt">유일한 향기</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="art art30">
+                        <input type="checkbox" id="checkbox">
+                        <p class="number">30</p>
+                        <div class="img-box"><a href="#"><img src="./images/img-main03-10.jpg" alt="main03-10"></a></div>
+                        <div class="box">
+                            <a href="#">Mars<br><span class="s-txt">도경수 (D.O.)</span></a>
+                            <a href="#"><span class="m-txt">성장 - THE 3RD MINI ALBUM</span></a>
+                            <div class="icon-box">
+                                <a href="#"><img src="./images/ico-play-line.svg" alt="ico-play-line"></a>
+                                <a href="#"><img src="./images/ico-pius.svg" alt="ico-pius"></a>
+                                <a href="#"><img src="./images/ico-download.svg" alt="ico-download"></a>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer01">
+                    <p>이용약관 | <strong>개인정보처리방침</strong> | 청소년 보호정책 | 위치기반서비스 이용약관 | 서비스이용문의</p>
+                    <address>
+                        (주)pli striming company 대표이사 홍길동 | 사업자등록번호 213-88-01524<br>
+                        서울특별시 강남구 강남대로 123, 플리 빌딩 13F | 1566-8724 | pli@music-pli.com<br>
+                        통신판매일신고 2024-서울강남-01524<br>
+                        ALL RIGHTS RESERVED.
+                    </address>
+                </div>
+                <div class="footer02">
+                    <p>이벤트<br>고객센터<br>공지사항</p>
+                    <div class="sns">
+                        <a href="#" class="sns01"><img src="./images/ico-facebook.svg" alt="facebook-icon"></a>
+                        <a href="#" class="sns02"><img src="./images/ico-insta.svg" alt="insta-icon"></a>
+                        <a href="#" class="sns03">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // sub-nav 호출 이벤트
+        $('.main-nav').mouseover(function(){
+            $('.header').addClass('active');
+            $('.sub-nav').slideDown(300);
+        })
+        $('.header').mouseleave(function(){
+            $('.header').removeClass('active');
+            $('.sub-nav').slideUp(300);
+        })
+    </script>
+</body>
+</html>
