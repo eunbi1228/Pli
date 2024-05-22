@@ -1,0 +1,18 @@
+@charset 'utf-8';
+
+.sec .container{width:502px; margin:54px auto;}
+.sec .container::before{content:''; display:block; position:relative; width:502px; height:524px; border-radius:5px; background:#ff8a00;}
+#id-box, #pw-box,.login-box{width:417px; height:60px; border:none; border-radius:5px; background:#fff; position:absolute; left:42px;}
+.sec input{font-family:'pretendard'; font-weight:400; font-size:16px; padding:21px;}
+#id-box{top:45px;}
+#pw-box{top:141px;}
+.pw img{width:25px; position:absolute; right:59px; top:161px;}
+.checkbox{position:absolute; left:42px; top:226px;}
+.checkbox span{font-family:'pretendard'; font-weight:400; font-size:16px;}
+.login-box{height:76px; top:280px; text-align:center; display:flex; justify-content:center; align-items:center; 
+    font-family:'pretendard'; font-size:20px; cursor:pointer;}
+.find{display:flex; flex-flow:row wrap; width:143px; transform:translate(186px, -149px);}
+.find01{margin-right:27px;}
+.find03{transform:translateX(50%); margin-top:10px;}
+.sns-login{display:flex; width:275px; justify-content:space-between; margin:0 auto; position:absolute; left:113px; bottom:90px;}
+.sns-login img{width:44px;}

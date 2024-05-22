@@ -1,0 +1,13 @@
+@charset 'utf-8';
+
+.sec .container{width:1153px; margin:54px auto;}
+.ticket-banner{position:relative; width:818px; margin:0 auto; display:flex; flex-flow:row nowrap; justify-content:space-between; margin-bottom:73px;}
+.ticket-banner img{width:388px;}
+button{width:40px; height:25px; border:none; border-radius:5px; background:lightcoral; display:block; margin-bottom:5px; cursor:pointer;}
+.button01-01{position:absolute; left:314px; top:116px;}
+.button01-02{position:absolute; left:314px; top:341px;}
+.button02-01{position:absolute; left:743px; top:116px;}
+.button02-02{position:absolute; left:743px; top:341px;}
+.ticket-txt{text-align:center;}
+.ticket-txt .tit{font-weight:600; font-size:20px;}
+.ticket-txt .txt{font-size:16px;}

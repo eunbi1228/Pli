@@ -1,0 +1,16 @@
+@charset 'utf-8';
+
+.sec .container{position:relative; width:502px; margin:54px auto;}
+.sec .container::before{content:''; display:block; position:relative; width:502px; height:524px; border-radius:5px; background:#ff8a00;}
+.sec .join{width:417px; margin:0 auto;}
+.sec h2{font-weight:500; font-size:20px; position:absolute; left:116px; top:33px;}
+.join span{font-size:16px;}
+.join .boxs{display:flex; flex-flow:row wrap; position:absolute; top:81px;}
+.join .box{display:flex; align-items:center; width:417px; height:60px; background:#fff; border-radius:5px; padding:8px 33px; margin-bottom:28px;}
+.join .box01{padding-left:148px;}
+.join .box02{background:#0f0;}
+.join .box03{background:#ff0;}
+.join .box05{background:#000; color:#fff;}
+.join img{width:44px; margin-right:52px;}
+.join .img-box{order:1;}
+.join a{order:2;}
