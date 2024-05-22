@@ -1,0 +1,19 @@
+@charset 'utf-8';
+
+.sec .container{width:1200; margin:32px auto;}
+.sec-txt{margin-top:35px; display:flex; width:1200px; flex-flow:row wrap;}
+.sec .tit{font-weight:700; font-size:30px; margin-right:33px;}
+.tit-box{display:flex; font-size:16px; align-items:center; padding-bottom:34px; border-bottom:2px solid #ccc;}
+.local-nav{display:flex; width:289px; justify-content:space-between;}
+.local-nav li{width:88px; height:30px; border-radius:10px; background:#ff8a00; text-align:center; padding-top:7px;}
+.art{width:565px; height:315px; border-radius:5px; background:#fdd3d3; margin-right:70px; margin-bottom:68px;}
+.art .box{display:flex; width:480px; justify-content:space-between; margin-left:44px; margin-top:44px;}
+.art01{margin-right:0;}
+.art .img-box{width:227px;}
+.art .icon-box{width:50px; margin-top:30px;}
+.art p{font-weight:600; font-size:24px; line-height:35px;}
+.box-txt{display:block; margin-top:20px;}
+.art:nth-child(1) svg{fill:#fc4c4c;}
+.art:nth-child(2) svg{fill:#4eb0f9;}
+.art:nth-child(3) svg{fill:#7b7c7c;}
+.art:nth-child(4) svg{fill:#d498f4;}

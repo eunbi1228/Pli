@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+.sec .container{width:1200; margin:32px auto;}
+.sec-txt{margin-top:35px; display:flex; width:1200px; flex-flow:row wrap;}
+.sec .tit{font-weight:700; font-size:30px; margin-right:33px;}
+.tit-box{display:flex; font-size:16px; align-items:center; padding-bottom:34px; border-bottom:2px solid #ccc;}
+.local-nav{display:flex; width:289px; justify-content:space-between;}
+.local-nav li{width:93px; height:30px; border-radius:10px; background:#ff8a00; text-align:center; padding-top:7px;}
+.local-nav li:nth-child(2){width:94px; background:#ccc;}
+.local-nav li:nth-child(3){width:93px; background:#ccc;}
+.sec-txt p{font-weight:500; padding-top:16px; text-align:center; line-height:23px; margin-bottom:50px;}
+.sec-txt p span{font-size:16px; line-height:0;}
+.sec-txt .art img{width:376px; margin-right:36px;}
+.sec-txt .art .img-box01 img{margin-right:0;}
+.art01 p{transform:translateX(-20px);}
