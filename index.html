@@ -10,12 +10,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- index 스타일 -->
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <title>Pli</title>
-
-    <style>
-        
-    </style>
 </head>
 <body>
     <div class="wrap">
@@ -486,6 +483,18 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        // sub-nav 호출 이벤트
+        $('.main-nav').mouseover(function(){
+            $('.header .container').addClass('active');
+            $('.sub-nav').slideDown(300);
+        })
+        $('.header').mouseleave(function(){
+            $('.header .container').removeClass('active');
+            $('.sub-nav').slideUp(300);
+        })
+    </script>
 
     <script src="./js/index.js"></script>
 </body>
