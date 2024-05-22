@@ -7,7 +7,7 @@ UI 시안디자인, 스타일가이드<br><br>
 <hr>
 TYPE : Pli 음악스트리밍 <br>
 PAGE : INDEX, SUB*3 (4페이지)<br>
-PERIOD : 7일, 디자인+퍼블리싱 개인 100% 작업<br>
+PERIOD : 10일, 디자인+퍼블리싱 개인 100% 작업<br>
 TOOL : Photoshop / HTML5 / CSS3 / javascript / Github / KAKAO Oven<br><br>
 
 
