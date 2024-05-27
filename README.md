@@ -15,6 +15,6 @@ TOOL : Photoshop / HTML5 / CSS3 / javascript / Github / KAKAO Oven<br><br>
 [Pli 기획서](https://github.com/eunbi1228/Pli/blob/main/Pli-planning.pdf)<br>
 [Pli 와이어프레임 바로가기](https://ovenapp.io/view/Q7kIWDn0NdFcBQvGuKW9jqXfuuMkpiaB/wumW9)<br>
 [Pli 프로토타입 바로가기](https://ovenapp.io/view/KRZkuuyfC7Y900JTiaiRfb7KeXNOzbBF/wumW9)<br>
-[Pli 시안디자인](https://github.com/eunbi1228/Pli/tree/main/photoshop)<br>
+[Pli 시안디자인](https://github.com/eunbi1228/Pli/tree/main/design)<br>
 
 ![Pli 시안디자인](https://github.com/eunbi1228/Pli/blob/main/images/pli-index.jpg)
